@@ -53,7 +53,7 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="190.0" layoutY="274.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="201.0" style="-fx-background-color: #224bc7;" text="Login">
+      <Button layoutX="185.0" layoutY="274.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="212.0" style="-fx-background-color: #224bc7;" text="Login">
          <font>
             <Font size="14.0" />
          </font>
