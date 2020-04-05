@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="341.0" prefHeight="341.0" prefWidth="517.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane minHeight="341.0" prefHeight="341.0" prefWidth="517.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SignupController">
    <children>
       <ImageView fitHeight="62.0" fitWidth="55.0" layoutX="101.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -47,37 +47,37 @@
             <Image url="@../../../../Desktop/IHM/PROJECT/SEXE.jpg" />
          </image>
       </ImageView>
-      <JFXTextField fx:id="username" layoutX="167.0" layoutY="114.0" prefHeight="30.0" prefWidth="212.0" promptText="Enter Your Username" unFocusColor="#a0a2ab">
+      <JFXTextField fx:id="name" layoutX="167.0" layoutY="114.0" prefHeight="30.0" prefWidth="212.0" promptText="Name" unFocusColor="#a0a2ab">
          <font>
             <Font size="14.0" />
          </font>
       </JFXTextField>
-      <JFXPasswordField fx:id="password" layoutX="167.0" layoutY="158.0" prefHeight="30.0" prefWidth="212.0" promptText="Enter Your Password" unFocusColor="#a0a2ab">
+      <JFXPasswordField fx:id="password" layoutX="167.0" layoutY="158.0" prefHeight="30.0" prefWidth="212.0" promptText="Password" unFocusColor="#a0a2ab">
          <font>
             <Font size="14.0" />
          </font>
       </JFXPasswordField>
-      <JFXTextField fx:id="username1" layoutX="168.0" layoutY="232.0" prefHeight="30.0" prefWidth="212.0" promptText="Enter Your Location" unFocusColor="#a0a2ab">
+      <JFXTextField fx:id="location" layoutX="168.0" layoutY="232.0" prefHeight="30.0" prefWidth="212.0" promptText="Enter Your Location" unFocusColor="#a0a2ab">
          <font>
             <Font size="14.0" />
          </font>
       </JFXTextField>
-      <JFXButton fx:id="login" layoutX="168.0" layoutY="284.0" prefHeight="38.0" prefWidth="212.0" style="-fx-background-color: #224bc7;" text="Sign UP" textFill="#a0a2ab">
+      <JFXButton fx:id="signup" layoutX="169.0" layoutY="284.0" onAction="#SignUP" prefHeight="38.0" prefWidth="212.0" style="-fx-background-color: #224bc7;" text="Sign UP" textFill="#a0a2ab">
          <font>
             <Font size="14.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="signup" layoutX="416.0" layoutY="21.0" prefHeight="38.0" prefWidth="79.0" style="-fx-background-color: #141628;" text="Login" textFill="#a0a2ab">
+      <JFXButton fx:id="login" layoutX="416.0" layoutY="21.0" onAction="#LoginAction" prefHeight="38.0" prefWidth="79.0" style="-fx-background-color: #141628;" text="Login" textFill="#a0a2ab">
          <font>
             <Font size="14.0" />
          </font>
       </JFXButton>
-      <JFXRadioButton layoutX="168.0" layoutY="207.0" text="Male" textFill="#a0a2ab">
+      <JFXRadioButton fx:id="male" layoutX="168.0" layoutY="207.0" text="Male" textFill="#a0a2ab">
          <font>
             <Font size="14.0" />
          </font>
       </JFXRadioButton>
-      <JFXRadioButton layoutX="272.0" layoutY="207.0" text="Famale" textFill="#a0a2ab">
+      <JFXRadioButton fx:id="female" layoutX="272.0" layoutY="207.0" text="Famale" textFill="#a0a2ab">
          <font>
             <Font size="14.0" />
          </font>

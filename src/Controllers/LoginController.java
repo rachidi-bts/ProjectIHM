@@ -1,5 +1,6 @@
 package Controllers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -8,10 +9,15 @@ import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 
+import application.Main;
 import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class LoginController implements Initializable {
@@ -50,5 +56,15 @@ public class LoginController implements Initializable {
 		pt.play();
 	}
 	
-
+	@FXML
+	public void SignUP(ActionEvent e1) throws IOException {
+		login.getScene().getWindow().hide();
+		
+		Stage signup =new Stage();
+		Parent root = FXMLLoader.load(Main.class.getResource("/FXML/SignUP.fxml"));
+		Scene scene = new Scene(root);
+		signup.setScene(scene);
+		signup.show();
+		signup.setResizable(false);
+	}
 }
