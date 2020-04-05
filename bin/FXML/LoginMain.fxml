@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane accessibleRole="BUTTON" minHeight="341.0" prefHeight="341.0" prefWidth="517.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane accessibleRole="BUTTON" minHeight="341.0" prefHeight="341.0" prefWidth="517.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController">
    <children>
       <JFXButton fx:id="signup" layoutX="421.0" layoutY="22.0" prefHeight="38.0" prefWidth="79.0" style="-fx-background-color: #141628;" text="Sign UP" textFill="#a0a2ab">
          <font>
