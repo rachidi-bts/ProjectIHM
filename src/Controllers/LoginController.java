@@ -8,8 +8,11 @@ import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 
+import javafx.animation.PauseTransition;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.util.Duration;
 
 public class LoginController implements Initializable {
 	@FXML
@@ -32,9 +35,20 @@ public class LoginController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		
-	}
+		username.setStyle("-fx-text-inner-color: #a0a2ab;");
+		password.setStyle("-fx-text-inner-color: #a0a2ab;");
 
+	}
+	@FXML
+	public void LoginAction(ActionEvent e) {
+		
+		PauseTransition pt = new PauseTransition();
+		pt.setDuration(Duration.seconds(3));
+		pt.setOnFinished(ev ->{
+			System.out.println("Login succesfully");
+		});
+		pt.play();
+	}
 	
 
 }

@@ -10,50 +10,57 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root minHeight="322.0" prefHeight="322.0" prefWidth="562.0" style="-fx-background-color: #2D3447;" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane accessibleRole="BUTTON" minHeight="341.0" prefHeight="341.0" prefWidth="517.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <JFXButton fx:id="signup" layoutX="470.0" layoutY="16.0" prefHeight="36.0" prefWidth="73.0" style="-fx-background-color: #151628;" text="Sign UP" textFill="#a0a2ab" />
-      <JFXButton fx:id="login" layoutX="329.0" layoutY="225.0" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: #224bc7;" text="Login" textFill="#a0a2ab" />
-      <JFXButton fx:id="forgotpassword" layoutX="217.0" layoutY="266.0" prefHeight="25.0" prefWidth="147.0" text="Forgot Your Password ?" textFill="#a0a2ab" underline="true" />
-      <JFXPasswordField fx:id="password" layoutX="186.0" layoutY="169.0" prefHeight="25.0" prefWidth="203.0" promptText="Enter Your Password" unFocusColor="#a0a2ab">
+      <JFXButton fx:id="signup" layoutX="421.0" layoutY="22.0" prefHeight="38.0" prefWidth="79.0" style="-fx-background-color: #141628;" text="Sign UP" textFill="#a0a2ab">
          <font>
             <Font size="14.0" />
-         </font>
-      </JFXPasswordField>
-      <JFXTextField fx:id="username" layoutX="186.0" layoutY="118.0" prefHeight="30.0" prefWidth="203.0" promptText="Enter Your Username" style="-fx-background-color: #2D3447;" unFocusColor="#a0a2ab">
+         </font></JFXButton>
+      <JFXTextField fx:id="username" layoutX="153.0" layoutY="126.0" prefHeight="25.0" prefWidth="207.0" promptText="Enter Your Username" unFocusColor="#a0a2ab">
          <font>
             <Font size="14.0" />
          </font>
       </JFXTextField>
-      <JFXCheckBox fx:id="remember" layoutX="186.0" layoutY="225.0" prefHeight="30.0" prefWidth="121.0" text="Remember Me" textFill="#a0a2ab">
+      <JFXPasswordField fx:id="password" layoutX="154.0" layoutY="187.0" prefHeight="25.0" prefWidth="207.0" promptText="Enter Your Password" unFocusColor="#a0a2ab">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXCheckBox fx:id="remember" layoutX="153.0" layoutY="231.0" prefHeight="38.0" prefWidth="137.0" text="Remember Me" textFill="#a0a2ab">
          <font>
             <Font size="14.0" />
          </font>
       </JFXCheckBox>
-      <ImageView fitHeight="62.0" fitWidth="55.0" layoutX="128.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+      <JFXButton fx:id="login" layoutX="297.0" layoutY="230.0" onAction="#LoginAction" prefHeight="38.0" prefWidth="63.0" style="-fx-background-color: #224bc7;" text="Login" textFill="#a0a2ab">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="forgotpassword" layoutX="183.0" layoutY="274.0" prefHeight="25.0" prefWidth="145.0" text="Forgot Your Password ?" textFill="#a0a2ab" underline="true" />
+      <ImageView fitHeight="62.0" fitWidth="55.0" layoutX="95.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../Desktop/IHM/PROJECT/USER.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="61.0" fitWidth="55.0" layoutX="127.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="61.0" fitWidth="55.0" layoutX="95.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../Desktop/IHM/PROJECT/PASSWORD.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="59.0" fitWidth="108.0" layoutX="228.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="59.0" fitWidth="108.0" layoutX="211.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../Desktop/IHM/PROJECT/IMMO.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="201.0" layoutY="65.0" prefHeight="17.0" prefWidth="91.0" text="Luxe" textFill="#224bc7">
+      <Label layoutX="186.0" layoutY="63.0" prefHeight="17.0" prefWidth="91.0" text="Luxe" textFill="#224bc7">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="257.0" layoutY="66.0" text="Immobilier" textFill="#a0a2ab">
+      <Label layoutX="243.0" layoutY="64.0" text="Immobilier" textFill="#a0a2ab">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
    </children>
-</fx:root>
+</AnchorPane>

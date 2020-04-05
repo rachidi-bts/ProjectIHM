@@ -11,8 +11,8 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("/FXML/LoginMain.fxml"));
-			Scene scene = new Scene(root,600,400);
+			Parent root = FXMLLoader.load(Main.class.getResource("/FXML/LoginMain.fxml"));
+			Scene scene = new Scene(root,517,341);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			primaryStage.setResizable(false);
