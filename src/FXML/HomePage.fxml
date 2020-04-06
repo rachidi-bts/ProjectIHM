@@ -7,7 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -16,8 +16,16 @@
    <children>
       <AnchorPane layoutX="132.0" prefHeight="43.0" prefWidth="385.0" style="-fx-background-color: #2D3447;">
          <children>
-            <Text layoutX="170.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME" />
-            <Ellipse fill="DODGERBLUE" layoutX="365.0" layoutY="22.0" radiusX="6.0" radiusY="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Text fx:id="welcome" fill="DODGERBLUE" layoutX="140.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME" wrappingWidth="122.0">
+               <font>
+                  <Font size="18.0" />
+               </font></Text>
+            <VBox fx:id="menu" layoutX="361.0" prefHeight="35.0" prefWidth="24.0" style="-fx-background-color: #1e90ff;">
+               <children>
+                  <JFXButton fx:id="logout" text="log out" />
+                  <JFXButton fx:id="exit" text="exit" />
+               </children>
+            </VBox>
          </children>
       </AnchorPane>
       <Pane prefHeight="343.0" prefWidth="131.0" style="-fx-background-color: #2D3447;">
@@ -43,9 +51,9 @@
       </Pane>
       <AnchorPane fx:id="holderpane" layoutX="132.0" layoutY="34.0" prefHeight="309.0" prefWidth="385.0">
          <children>
-            <AnchorPane fx:id="home" layoutY="8.0" prefHeight="180.0" prefWidth="210.0">
+            <AnchorPane fx:id="annonce" layoutY="8.0" prefHeight="180.0" prefWidth="210.0">
                <children>
-                  <JFXButton contentDisplay="TOP" layoutX="5.0" layoutY="13.0" prefHeight="139.0" prefWidth="176.0" style="-fx-border-color: #2D3447;" text="maison 1">
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="5.0" layoutY="13.0" prefHeight="139.0" prefWidth="176.0" style="-fx-border-color: #2D3447;" text="150m ,massira1,TEL:07637291">
                      <graphic>
                         <ImageView fitHeight="92.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -54,7 +62,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton contentDisplay="TOP" layoutX="5.0" layoutY="153.0" prefHeight="139.0" prefWidth="173.0" style="-fx-border-color: #2D3447;" text="maison 2">
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="5.0" layoutY="153.0" prefHeight="139.0" prefWidth="173.0" style="-fx-border-color: #2D3447;" text="200m ,afak,TEL:0763748291">
                      <graphic>
                         <ImageView fitHeight="94.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -63,7 +71,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton contentDisplay="TOP" layoutX="187.0" layoutY="153.0" prefHeight="139.0" prefWidth="173.0" style="-fx-border-color: #2D3447;" text="maison 3">
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="187.0" layoutY="153.0" prefHeight="139.0" prefWidth="173.0" style="-fx-border-color: #2D3447;" text="500m ,menara,TEL:074878291">
                      <graphic>
                         <ImageView fitHeight="107.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -72,7 +80,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton contentDisplay="TOP" layoutX="187.0" layoutY="13.0" prefHeight="139.0" prefWidth="176.0" style="-fx-border-color: #2D3447;" text="maison4">
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="187.0" layoutY="13.0" prefHeight="139.0" prefWidth="176.0" style="-fx-border-color: #2D3447;" text="300m ,targa,TEL:076378291">
                      <graphic>
                         <ImageView fitHeight="84.0" fitWidth="174.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -83,6 +91,7 @@
                   </JFXButton>
                </children>
             </AnchorPane>
-         </children></AnchorPane>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
