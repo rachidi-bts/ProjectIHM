@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="home" prefHeight="307.0" prefWidth="383.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton contentDisplay="TOP" layoutX="5.0" layoutY="13.0" prefHeight="139.0" prefWidth="176.0" style="-fx-border-color: #2D3447;" text="maison 1">
+         <graphic>
+            <ImageView fitHeight="92.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/IHM/PROJECT/immo1.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="5.0" layoutY="153.0" prefHeight="139.0" prefWidth="173.0" style="-fx-border-color: #2D3447;" text="maison 2">
+         <graphic>
+            <ImageView fitHeight="94.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/IHM/PROJECT/immo3.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="187.0" layoutY="153.0" prefHeight="139.0" prefWidth="173.0" style="-fx-border-color: #2D3447;" text="maison 3">
+         <graphic>
+            <ImageView fitHeight="107.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/IHM/PROJECT/immo2.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="187.0" layoutY="13.0" prefHeight="139.0" prefWidth="176.0" style="-fx-border-color: #2D3447;" text="maison4">
+         <graphic>
+            <ImageView fitHeight="84.0" fitWidth="174.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/IHM/PROJECT/immo4.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

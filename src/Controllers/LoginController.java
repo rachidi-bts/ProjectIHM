@@ -22,6 +22,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -43,69 +45,84 @@ public class LoginController implements Initializable {
 
 	@FXML
 	private JFXCheckBox remember;
-	
-	private Connection connection ;
-    private DBHandler handler;
-    private PreparedStatement pst;
+
+	private Connection connection;
+	private DBHandler handler;
+	private PreparedStatement pst;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		username.setStyle("-fx-text-inner-color: #a0a2ab;");
 		password.setStyle("-fx-text-inner-color: #a0a2ab;");
 
-    	handler = new DBHandler();
+		handler = new DBHandler();
 
 	}
+
 	@FXML
 	public void LoginAction(ActionEvent e) {
-		
+
 		PauseTransition pt = new PauseTransition();
 		pt.setDuration(Duration.seconds(3));
-		pt.setOnFinished(ev ->{
+		pt.setOnFinished(ev -> {
 			System.out.println("Login succesfully");
 		});
 		pt.play();
-		
-		//Retrive data from DB
-		
-		connection = handler.getConnection();
-	  String sql = "SELECT * from immo where name=? and pass=? ";
-				
-				try {
-					pst = connection.prepareStatement(sql);
-					pst.setString(1, username.getText());
-					pst.setString(2, password.getText());
-				ResultSet rs = pst.executeQuery();
-				
-				int count=0;
-				
-				while (rs.next()) {
-					count=count+1;
-				}
-				if (count==1) {
-					System.out.println("Login succesfull");
-				} else {
-					System.out.println("username or password incorrect");
 
-				}
+		// Retrive data from DB
+
+		connection = handler.getConnection();
+		String sql = "SELECT * from immo where name=? and pass=? ";
+
+		try {
+			pst = connection.prepareStatement(sql);
+			pst.setString(1, username.getText());
+			pst.setString(2, password.getText());
+			ResultSet rs = pst.executeQuery();
+
+			int count = 0;
+
+			while (rs.next()) {
+				count = count + 1;
+			}
+			if (count == 1) {
+				login.getScene().getWindow().hide();
 				
-				} catch (SQLException e1) {
-					e1.printStackTrace();
-				}
-				finally {
-					try {
-						connection.close();
-					} catch (SQLException e1) {
-						e1.printStackTrace();
-					}
-				}
+			Stage home = new Stage();
+			try {
+				Parent root = FXMLLoader.load(getClass().getResource("/FXML/HomePage.fxml"));
+				Scene scene = new Scene(root);
+				home.setScene(scene);
+				home.show();
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			}
+			
+				
+			
+			} else {
+				Alert alert = new Alert(Alert.AlertType.ERROR);
+				alert.setHeaderText(null);
+				alert.setContentText("username or password incorrect");
+				alert.show();
+			}
+
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
+		}
 	}
-	
+
 	@FXML
 	public void SignUP(ActionEvent e1) throws IOException {
 		login.getScene().getWindow().hide();
-		
-		Stage signup =new Stage();
+
+		Stage signup = new Stage();
 		Parent root = FXMLLoader.load(Main.class.getResource("/FXML/SignUP.fxml"));
 		Scene scene = new Scene(root);
 		signup.setScene(scene);
