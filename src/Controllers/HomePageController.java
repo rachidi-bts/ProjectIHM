@@ -7,14 +7,20 @@ import java.util.ResourceBundle;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPopup;
 
+import application.Main;
 import javafx.animation.FadeTransition;
+import javafx.animation.PauseTransition;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class HomePageController implements Initializable {
@@ -37,47 +43,34 @@ public class HomePageController implements Initializable {
 	private AnchorPane annonce;
 
 	AnchorPane home;
-
+	
+	AnchorPane main;
+	@FXML
+	private JFXButton details;
 	@Override
 	public void initialize(URL arg0, ResourceBundle args1) {
 		
-		createPage();
 		openMenu();
 	}
 
 	private void openMenu() {
 		JFXPopup pop = new JFXPopup();
 		pop.setPopupContent(logout);
-		
-		
-		
-		
-		
 	}
+		
+	
+	
+	@FXML
+	public void Details(ActionEvent e1) throws IOException {
+		holderpane.getScene().getWindow().hide();
 
-	private void setNode(Node node) {
-		holderpane.getChildren().clear();
-		holderpane.getChildren().add((Node) node);
+		Stage details = new Stage();
+		Parent root = FXMLLoader.load(Main.class.getResource("/FXML/AnnonceDetails.fxml"));
+		Scene scene = new Scene(root);
+		details.setScene(scene);
+		details.show();
+		details.setResizable(false);
+	}  
+	
+	 }
 
-		FadeTransition ft = new FadeTransition(Duration.millis(1550));
-		ft.setNode(node);
-		ft.setFromValue(0.1);
-		ft.setToValue(1);
-		ft.setCycleCount(1);
-		ft.setAutoReverse(false);
-		ft.play();
-
-	}
-
-	private void createPage() {
-		try {
-			home = FXMLLoader.load(getClass().getResource("/FXML/Annonce.fxml"));
-			setNode(home);
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-	}
-
-}

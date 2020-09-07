@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane minHeight="341.0" prefWidth="517.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.HomePageController">
+<AnchorPane minHeight="341.0" prefWidth="517.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AnnonceDetailsController">
    <children>
       <AnchorPane layoutX="132.0" prefHeight="43.0" prefWidth="385.0" style="-fx-background-color: #2D3447;">
          <children>
@@ -28,7 +28,7 @@
             </VBox>
          </children>
       </AnchorPane>
-      <Pane prefHeight="343.0" prefWidth="131.0" style="-fx-background-color: #2D3447;">
+      <Pane fx:id="main" prefHeight="343.0" prefWidth="131.0" style="-fx-background-color: #2D3447;">
          <children>
             <ImageView fitHeight="43.0" fitWidth="72.0" layoutX="21.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -51,44 +51,17 @@
       </Pane>
       <AnchorPane fx:id="holderpane" layoutX="132.0" layoutY="34.0" prefHeight="309.0" prefWidth="385.0">
          <children>
-            <AnchorPane fx:id="annonce" layoutY="8.0" prefHeight="180.0" prefWidth="210.0">
+            <AnchorPane fx:id="annonce" layoutY="8.0" prefHeight="290.0" prefWidth="385.0">
                <children>
-                  <JFXButton fx:id="details" buttonType="RAISED" contentDisplay="TOP" layoutX="5.0" layoutY="13.0" onAction="#Details" prefHeight="139.0" prefWidth="176.0" style="-fx-border-color: #2D3447;" text="150m PRIX: 23 000 000DH">
-                     <graphic>
-                        <ImageView fitHeight="92.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../Desktop/IHM/PROJECT/immo1.jpg" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </JFXButton>
-                  <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="5.0" layoutY="153.0" prefHeight="139.0" prefWidth="173.0" style="-fx-border-color: #2D3447;" text="200m PRIX: 28 000 000DH">
-                     <graphic>
-                        <ImageView fitHeight="94.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../Desktop/IHM/PROJECT/immo3.jpg" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </JFXButton>
-                  <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="187.0" layoutY="153.0" prefHeight="139.0" prefWidth="173.0" style="-fx-border-color: #2D3447;" text="500m PRIX: 50 000 000DH">
-                     <graphic>
-                        <ImageView fitHeight="107.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../Desktop/IHM/PROJECT/immo2.jpg" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </JFXButton>
-                  <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="187.0" layoutY="13.0" prefHeight="139.0" prefWidth="176.0" style="-fx-border-color: #2D3447;" text="300m PRIX: 40 000 000DH">
-                     <graphic>
-                        <ImageView fitHeight="84.0" fitWidth="174.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../Desktop/IHM/PROJECT/immo4.jpg" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="15.0" layoutY="181.0" prefHeight="35.0" prefWidth="348.0" style="-fx-border-color: #2D3447;" text="A vendre: 150m-4chambre-cuisine-garage-3toilettes-jardin. Adress: ,massira1,TEL:07637291" />
+                  <ImageView fitHeight="157.0" fitWidth="306.0" layoutX="54.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/IHM/PROJECT/immo1.jpg" />
+                     </image>
+                  </ImageView>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="15.0" layoutY="216.0" prefHeight="35.0" prefWidth="348.0" style="-fx-border-color: #2D3447;" text="Adress: massira1,Marrakech   TEL:07637291" />
+                  <JFXButton fx:id="email" layoutX="129.0" layoutY="251.0" onAction="#Email" prefHeight="25.0" prefWidth="100.0" text="Envoyer mail" textFill="#4a4a9a" underline="true" />
+                  <JFXButton fx:id="retour" layoutX="309.0" layoutY="14.0" onAction="#Retour" prefHeight="35.0" prefWidth="62.0" text="retour" textFill="#0230fc" underline="true" />
                </children>
             </AnchorPane>
          </children>
