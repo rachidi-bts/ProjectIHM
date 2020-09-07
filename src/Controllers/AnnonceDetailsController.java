@@ -45,6 +45,8 @@ public class AnnonceDetailsController implements Initializable {
 	private JFXButton retour;
 	@FXML
 	private JFXButton email;
+	@FXML
+	private JFXButton contact;
 	
 	@FXML
 	private AnchorPane annonce;
@@ -92,7 +94,28 @@ public class AnnonceDetailsController implements Initializable {
 		}
 
 	}*/
-	
+	@FXML
+	public void Logout(ActionEvent e1) throws IOException {
+		holderpane.getScene().getWindow().hide();
+
+		Stage retour = new Stage();
+		Parent root = FXMLLoader.load(Main.class.getResource("/FXML/LoginMain.fxml"));
+		Scene scene = new Scene(root);
+		retour.setScene(scene);
+		retour.show();
+		retour.setResizable(false);
+	} 
+	@FXML
+	public void Contact(ActionEvent e1) throws IOException {
+		holderpane.getScene().getWindow().hide();
+
+		Stage contact = new Stage();
+		Parent root = FXMLLoader.load(Main.class.getResource("/FXML/ContactUs.fxml"));
+		Scene scene = new Scene(root);
+		contact.setScene(scene);
+		contact.show();
+		contact.setResizable(false);
+	} 
 	@FXML
 	public void Retour(ActionEvent e1) throws IOException {
 		holderpane.getScene().getWindow().hide();

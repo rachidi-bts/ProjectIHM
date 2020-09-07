@@ -20,10 +20,9 @@
                <font>
                   <Font size="18.0" />
                </font></Text>
-            <VBox fx:id="menu" layoutX="361.0" prefHeight="35.0" prefWidth="24.0" style="-fx-background-color: #1e90ff;">
+            <VBox fx:id="menu" layoutX="347.0" layoutY="-3.0" prefHeight="35.0" prefWidth="24.0" style="-fx-background-color: #1e90ff;">
                <children>
-                  <JFXButton fx:id="logout" text="log out" />
-                  <JFXButton fx:id="exit" text="exit" />
+                  <JFXButton fx:id="logout" onAction="#Logout" text="log out" />
                </children>
             </VBox>
          </children>
@@ -43,7 +42,7 @@
             <Line endX="40.5" layoutX="20.0" layoutY="80.0" startX="-20.0" stroke="#a0a2ab" />
             <Label layoutX="4.0" layoutY="98.0" prefHeight="77.0" prefWidth="122.0" text="Welcome to our page here you will find properties informations" textFill="#c7c6d0" wrapText="true" />
             <Separator layoutX="11.0" layoutY="283.0" prefHeight="24.0" prefWidth="109.0" />
-            <JFXButton layoutX="14.0" layoutY="305.0" prefHeight="35.0" prefWidth="100.0" text="CONTACT US" textFill="#a0a2ab" underline="true" />
+            <JFXButton fx:id="contact" layoutX="14.0" layoutY="305.0" onAction="#Contact" prefHeight="35.0" prefWidth="100.0" text="CONTACT US" textFill="#a0a2ab" underline="true" />
             <JFXButton layoutX="25.0" layoutY="193.0" text="ANNONCES" textFill="#0000008f" />
             <JFXButton layoutX="16.0" layoutY="225.0" text="MY ANNONCES" textFill="#0000008f" />
             <JFXButton layoutX="32.0" layoutY="258.0" text="ABOUT" textFill="#0000008f" />

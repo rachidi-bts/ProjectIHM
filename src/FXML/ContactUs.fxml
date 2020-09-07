@@ -27,7 +27,7 @@
             </VBox>
          </children>
       </AnchorPane>
-      <Pane prefHeight="343.0" prefWidth="131.0" style="-fx-background-color: #2D3447;">
+      <Pane prefHeight="343.0" prefWidth="133.0" style="-fx-background-color: #2D3447;">
          <children>
             <ImageView fitHeight="43.0" fitWidth="72.0" layoutX="21.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -43,51 +43,19 @@
             <Label layoutX="4.0" layoutY="98.0" prefHeight="77.0" prefWidth="122.0" text="Welcome to our page here you will find properties informations" textFill="#c7c6d0" wrapText="true" />
             <Separator layoutX="11.0" layoutY="283.0" prefHeight="24.0" prefWidth="109.0" />
             <JFXButton fx:id="contact" layoutX="14.0" layoutY="305.0" onAction="#Contact" prefHeight="35.0" prefWidth="100.0" text="CONTACT US" textFill="#a0a2ab" underline="true" />
-            <JFXButton layoutX="25.0" layoutY="193.0" text="ANNONCES" textFill="#0000008f" />
+            <JFXButton fx:id="annonces" layoutX="25.0" layoutY="193.0" onAction="#Annonces" text="ANNONCES" textFill="#0000008f" />
             <JFXButton layoutX="16.0" layoutY="225.0" text="MY ANNONCES" textFill="#0000008f" />
             <JFXButton layoutX="32.0" layoutY="258.0" text="ABOUT" textFill="#0000008f" />
          </children>
       </Pane>
-      <AnchorPane fx:id="holderpane" layoutX="132.0" layoutY="34.0" prefHeight="309.0" prefWidth="385.0">
+      <AnchorPane fx:id="holderpane" layoutX="132.0" layoutY="34.0" prefHeight="309.0" prefWidth="385.0" style="-fx-background-color: #2D3447;">
          <children>
-            <AnchorPane fx:id="annonce" layoutY="8.0" prefHeight="180.0" prefWidth="210.0">
+            <AnchorPane fx:id="annonce" layoutX="-2.0" layoutY="8.0" prefHeight="285.0" prefWidth="391.0">
                <children>
-                  <JFXButton fx:id="details" buttonType="RAISED" contentDisplay="TOP" layoutX="5.0" layoutY="13.0" onAction="#Details" prefHeight="139.0" prefWidth="176.0" style="-fx-border-color: #2D3447;" text="150m PRIX: 23 000 000DH">
-                     <graphic>
-                        <ImageView fitHeight="92.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../Desktop/IHM/PROJECT/immo1.jpg" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </JFXButton>
-                  <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="5.0" layoutY="153.0" prefHeight="139.0" prefWidth="173.0" style="-fx-border-color: #2D3447;" text="200m PRIX: 28 000 000DH">
-                     <graphic>
-                        <ImageView fitHeight="94.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../Desktop/IHM/PROJECT/immo3.jpg" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </JFXButton>
-                  <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="187.0" layoutY="153.0" prefHeight="139.0" prefWidth="173.0" style="-fx-border-color: #2D3447;" text="500m PRIX: 50 000 000DH">
-                     <graphic>
-                        <ImageView fitHeight="107.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../Desktop/IHM/PROJECT/immo2.jpg" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </JFXButton>
-                  <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="187.0" layoutY="13.0" prefHeight="139.0" prefWidth="176.0" style="-fx-border-color: #2D3447;" text="300m PRIX: 40 000 000DH">
-                     <graphic>
-                        <ImageView fitHeight="84.0" fitWidth="174.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../Desktop/IHM/PROJECT/immo4.jpg" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="5.0" layoutY="13.0" prefHeight="101.0" prefWidth="377.0" style="-fx-border-color: #cfa3da; -fx-background-color: #cfa3da;" text="RACHIDI Ibtissam : Directeur du site" textFill="#551e9c" />
+                  <JFXButton fx:id="email" buttonType="RAISED" contentDisplay="TOP" layoutX="113.0" layoutY="114.0" onAction="#Email" prefHeight="25.0" prefWidth="161.0" style="-fx-border-color: #2D3447; -fx-background-color: #cfa3da;" text="envoyez un email" textFill="#b92dc6" />
+                  <JFXButton fx:id="email1" buttonType="RAISED" contentDisplay="TOP" layoutX="113.0" layoutY="251.0" onAction="#Email" prefHeight="25.0" prefWidth="161.0" style="-fx-border-color: #2D3447; -fx-background-color: #cfa3da;" text="envoyez un email" textFill="#b92dc6" />
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="4.0" layoutY="150.0" prefHeight="101.0" prefWidth="385.0" style="-fx-border-color: #cfa3da; -fx-background-color: #cfa3da;" text="RAYESS Lamya : Responsable des annonces" textFill="#551e9c" />
                </children>
             </AnchorPane>
          </children>
